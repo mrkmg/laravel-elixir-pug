@@ -41,8 +41,6 @@ Elixir.extend('pug', function (options)
         ]
     );
 
-    pug_options.basedir = options.src;
-
     var watch = [options.src + options.search].concat(options.additional_watches);
 
     new Task('pug', function ()
