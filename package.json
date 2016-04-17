@@ -17,5 +17,8 @@
     "extend": "^3.0.0",
     "gulp-pug": "^1.2.0",
     "object.pick": "^1.1.2"
+  },
+  "peerDependencies": {
+    "pug": "^2.0.0"
   }
 }
