@@ -40,7 +40,7 @@ Example with all *(default)* options:
                 src: 'resources/assets/pug/',
                 // File names to look for, useful if you are still naming files .jade
                 search: '**/*.pug',
-                // If blade is true, output to resources/templates, otherwise public/html
+                // If blade is true, output to resources/views, otherwise public/html
                 dest: 'public/html',
                 // Any additional watches
                 additional_watches: []
