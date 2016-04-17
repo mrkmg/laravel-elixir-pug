@@ -12,11 +12,14 @@ var Task = Elixir.Task;
 
 Elixir.extend('pug', function (options)
 {
+    var default_dest = options.blade ? 'resources/blade' : 'public/html/';
+
     options = Extend({
+        blade: false,
         pretty: true,
         src: 'resources/assets/pug/',
         search: '**/*.pug',
-        dest: 'public/html',
+        dest: default_dest,
         additional_watches: []
     }, options);
 
@@ -31,7 +34,10 @@ Elixir.extend('pug', function (options)
             'self',
             'debug',
             'compileDebug',
-            'compiler'
+            'cache',
+            'compiler',
+            'parser',
+            'globals'
         ]
     );
 
@@ -48,7 +54,7 @@ Elixir.extend('pug', function (options)
             .pipe(Pug(pug_options))
             .pipe(Rename(function (path)
             {
-                path.extname = '.html'
+                path.extname = options.blade ? '.blade.php' : '.html'
             }))
             .pipe(Gulp.dest(options.dest))
             .pipe(Print());
