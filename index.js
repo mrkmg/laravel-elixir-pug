@@ -1,3 +1,10 @@
+/**
+ * laravel-elixir-pug
+ *
+ * Author: Kevin Gravier <kevin@mrkmg.com>
+ * License: MIT
+ */
+
 var Elixir = require('laravel-elixir');
 var Gulp = require('gulp');
 
@@ -12,7 +19,7 @@ var Task = Elixir.Task;
 
 Elixir.extend('pug', function (options)
 {
-    var default_dest = options.blade ? 'resources/views' : 'public/html/';
+    var default_dest = options.blade ? 'resources/views' : 'public/html';
 
     options = Extend({
         blade: false,
