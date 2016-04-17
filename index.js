@@ -12,7 +12,7 @@ var Task = Elixir.Task;
 
 Elixir.extend('pug', function (options)
 {
-    var default_dest = options.blade ? 'resources/blade' : 'public/html/';
+    var default_dest = options.blade ? 'resources/views' : 'public/html/';
 
     options = Extend({
         blade: false,

@@ -1,7 +1,7 @@
 Laravel Elixir Angularify
 ============================
 
-Current Version: 0.2.0
+Current Version: 0.2.1
 
 A Laravel Elixir mix to compile Pug templates into either blade or html files.
 
@@ -40,7 +40,7 @@ Example with all *(default)* options:
                 src: 'resources/assets/pug/',
                 // File names to look for, useful if you are still naming files .jade
                 search: '**/*.pug',
-                // If blade is true, output to resources/templates, otherwise public/html
+                // If blade is true, output to resources/views, otherwise public/html
                 dest: 'public/html',
                 // Any additional watches
                 additional_watches: []
