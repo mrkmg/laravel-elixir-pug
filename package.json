@@ -1,0 +1,21 @@
+{
+  "name": "laravel-elixir-pug",
+  "version": "0.0.1",
+  "description": "Elixir Mix to compile pug templates into html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "pug"
+  ],
+  "author": "Kevin Gravier <kevin@mrkmg.com>",
+  "license": "MIT",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "gulp-pug": "^1.2.0",
+    "object.pick": "^1.1.2"
+  }
+}
