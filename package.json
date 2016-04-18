@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "extend": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-pug": "^1.2.0",
     "object.pick": "^1.1.2"
   },
