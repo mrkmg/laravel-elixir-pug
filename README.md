@@ -1,4 +1,4 @@
-Laravel Elixir Angularify
+Laravel Elixir Pug
 ============================
 
 Current Version: 1.0.1
