@@ -1,7 +1,7 @@
-Laravel Elixir Angularify
+Laravel Elixir Pug
 ============================
 
-Current Version: 1.0.1
+Current Version: 1.0.2
 
 A Laravel Elixir mix to compile Pug templates into either blade or html files.
 
