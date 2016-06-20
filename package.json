@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-pug",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Elixir Mix to compile pug templates into html",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "dependencies": {
     "extend": "^3.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^1.2.0",
+    "gulp-pug": "^3.0.3",
     "gulp-print": "^2.0.1",
     "object.pick": "^1.1.2"
   },
