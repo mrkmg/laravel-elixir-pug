@@ -60,7 +60,7 @@ You can also pass the following options will pass directly to gulp-pug
     parser
     globals
 
-See the [Pug API](https://www.pug-lang.com/api) for an explanation of these options.
+See the [Pug API](https://www.jade-lang.com/api) for an explanation of these options.
 
 Then run `gulp`
 
