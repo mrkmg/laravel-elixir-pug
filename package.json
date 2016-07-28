@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-pug",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Elixir Mix to compile pug templates into html",
   "main": "index.js",
   "scripts": {
