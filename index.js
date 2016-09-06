@@ -45,7 +45,8 @@ Elixir.extend('pug', function (options)
             'compiler',
             'parser',
             'globals',
-            'locals'
+            'locals',
+            'filters'
         ]
     );
 
