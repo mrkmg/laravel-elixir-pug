@@ -56,6 +56,7 @@ You can also pass the following options will pass directly to gulp-pug
     self
     debug
     compileDebug
+    locals
     globals
     cache
     inlineRuntimeFunctions
