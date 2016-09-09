@@ -35,18 +35,17 @@ Elixir.extend('pug', function (options)
     var pug_options = Pick(
         options,
         [
-            'filename',
+            'basedir',
             'doctype',
             'pretty',
+            'filters',
             'self',
             'debug',
             'compileDebug',
-            'cache',
-            'compiler',
-            'parser',
             'globals',
-            'locals',
-            'filters'
+            'cache',
+            'inlineRuntimeFunctions',
+            'name'
         ]
     );
 
