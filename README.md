@@ -1,7 +1,7 @@
 Laravel Elixir Pug
 ============================
 
-Current Version: 1.1.0
+Current Version: 1.1.1
 
 A Laravel Elixir mix to compile Pug templates into either blade or html files.
 
