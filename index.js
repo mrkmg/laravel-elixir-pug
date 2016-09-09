@@ -42,6 +42,7 @@ Elixir.extend('pug', function (options)
             'self',
             'debug',
             'compileDebug',
+            'locals',
             'globals',
             'cache',
             'inlineRuntimeFunctions',

@@ -1,7 +1,7 @@
 Laravel Elixir Pug
 ============================
 
-Current Version: 1.1.1
+Current Version: 1.1.2
 
 A Laravel Elixir mix to compile Pug templates into either blade or html files.
 
@@ -56,6 +56,7 @@ You can also pass the following options will pass directly to gulp-pug
     self
     debug
     compileDebug
+    locals
     globals
     cache
     inlineRuntimeFunctions
