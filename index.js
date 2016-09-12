@@ -14,6 +14,7 @@ var Pug = require('gulp-pug');
 var Print = require('gulp-print');
 var Plumber = require('gulp-plumber');
 var Rename = require('gulp-rename');
+var Changed = require('gulp-changed');
 
 var Task = Elixir.Task;
 
@@ -51,19 +52,19 @@ Elixir.extend('pug', function (options)
     );
 
     var watch = [options.src + options.search].concat(options.additional_watches);
+    var extension = options.blade ? '.blade.php' : '.html'
 
     new Task('pug', function ()
     {
         return Gulp
             .src(gulp_src)
-            .pipe(Print())
             .pipe(Plumber())
+            .pipe(Changed(options.dest, {extension: extension}))
             .pipe(Pug(pug_options))
             .pipe(Rename(function (path)
             {
-                path.extname = options.blade ? '.blade.php' : '.html'
+                path.extname = extension;
             }))
             .pipe(Gulp.dest(options.dest))
-            .pipe(Print());
     }).watch(watch);
 });
