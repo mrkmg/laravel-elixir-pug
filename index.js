@@ -11,10 +11,10 @@ var Gulp = require('gulp');
 var Extend = require('extend');
 var Pick = require('object.pick');
 var Pug = require('gulp-pug');
-var Print = require('gulp-print');
 var Plumber = require('gulp-plumber');
 var Rename = require('gulp-rename');
 var Changed = require('gulp-changed');
+var PugInheritance = require('gulp-pug-inheritance');
 
 var Task = Elixir.Task;
 
@@ -28,7 +28,8 @@ Elixir.extend('pug', function (options)
         src: 'resources/assets/pug/',
         search: '**/*.pug',
         dest: default_dest,
-        additional_watches: []
+        additional_watches: [],
+        pugExtension: '.pug'
     }, options);
 
     var gulp_src = options.src + options.search;
@@ -52,7 +53,7 @@ Elixir.extend('pug', function (options)
     );
 
     var watch = [options.src + options.search].concat(options.additional_watches);
-    var extension = options.blade ? '.blade.php' : '.html'
+    var extension = options.blade ? '.blade.php' : '.html';
 
     new Task('pug', function ()
     {
@@ -60,6 +61,7 @@ Elixir.extend('pug', function (options)
             .src(gulp_src)
             .pipe(Plumber())
             .pipe(Changed(options.dest, {extension: extension}))
+            .pipe(PugInheritance({basedir: options.src, extension: options.pugExtension, skip: '_partials'}))
             .pipe(Pug(pug_options))
             .pipe(Rename(function (path)
             {
