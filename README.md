@@ -40,6 +40,8 @@ Example with all *(default)* options:
                 src: 'resources/assets/pug/',
                 // File names to look for, useful if you are still naming files .jade
                 search: '**/*.pug',
+                // Extension of pug files. Only needed to be set if still naming file .jade
+                pugExtension: '.pug',
                 // If blade is true, output to resources/views, otherwise public/html
                 dest: 'public/html',
                 // Any additional watches
@@ -65,5 +67,18 @@ You can also pass the following options will pass directly to gulp-pug
 See the [Pug API](https://www.jade-lang.com/api) for an explanation of these options.
 
 Then run `gulp`
+
+Other Notes
+-----------
+
+If you are still using the .jade extension, all your includes must have the extension included. For example:
+
+    include _partials/header
+    
+will not work. You must use:
+
+    include _partials/header.jade
+    
+
 
 License: MIT
