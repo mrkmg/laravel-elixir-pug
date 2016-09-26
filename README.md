@@ -38,8 +38,10 @@ Example with all *(default)* options:
                 pretty: true,
                 // Source of pug files
                 src: 'resources/assets/pug/',
-                // File names to look for, useful if you are still naming files .jade
+                // Files to look for, useful if you are still naming files .jade
                 search: '**/*.pug',
+                // Files to skip, useful for partials
+                exclude: '_partials/**/*',
                 // Extension of pug files. Only needed to be set if still naming file .jade
                 pugExtension: '.pug',
                 // If blade is true, output to resources/views, otherwise public/html
