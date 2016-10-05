@@ -19,17 +19,17 @@ var Ignore = require('gulp-ignore');
 
 var Task = Elixir.Task;
 
+var pug_task_increment = 0;
+
 Elixir.extend('pug', function (options)
 {
-    var default_dest = options.blade ? 'resources/views' : 'public/html';
-
     options = Extend({
         blade: false,
         pretty: true,
         src: 'resources/assets/pug/',
         exclude: '_partials/**/*',
         search: '**/*.pug',
-        dest: default_dest,
+        dest: options.blade ? 'resources/views' : 'public/html',
         additional_watches: [],
         pugExtension: '.pug'
     }, options);
@@ -59,7 +59,7 @@ Elixir.extend('pug', function (options)
     var watch = [options.src + options.search].concat(options.additional_watches);
     var extension = options.blade ? '.blade.php' : '.html';
 
-    new Task('pug', function ()
+    return new Task('pug_' + (pug_task_increment++), function ()
     {
         return Gulp
             .src(gulp_src)
