@@ -19,7 +19,7 @@
     "gulp-ignore": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.0.4",
-    "gulp-pug-inheritance": "mrkmg/gulp-pug-inheritance#b750016ddefb11691615df8a177926319f227239",
+    "gulp-pug-inheritance": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "object.pick": "^1.1.2"
   },
